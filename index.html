@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,9 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>Weather app</title>
   </head>
   <body>
@@ -62,20 +64,13 @@
         <div class="column">
           <h1 class="temp-title" id="temp-title">10</h1>
         </div>
-        <span id="unit">°C</span>
+        <span class="celsius" id="celsius">°C</span>
+        <span class="fahrenheit" id="fahrenheit">°F</span>
         <span class="column-emoji" id="emoji">☁️</span>
         <ul>
-          <li class="under">Humidity: <span id="humidity">50</span>%</li>
-          <li class="under">Wind: <span id="weather">5 </span>km/h</li>
+          <li class="underline">Humidity: <span id="humidity">50</span>%</li>
+          <li class="underline">Wind: <span id="weather">5 </span>km/h</li>
         </ul>
-      </div>
-      <div class="row">
-        <div class="column">
-          <p class="celsius">°C</p>
-        </div>
-        <div class="column">
-          <p class="fahrenheit">°F</p>
-        </div>
       </div>
       <div class="row">
         <div class="card">

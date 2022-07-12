@@ -1,4 +1,4 @@
-.container-fluid {
+body {
   font-family: "Roboto Mono", monospace;
 }
 
@@ -21,6 +21,7 @@
 
 .header-title {
   font-family: "Oswald", sans-serif;
+  font-size: 40px;
   margin-left: 10px;
 }
 
@@ -34,7 +35,7 @@
 }
 
 .column-emoji {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 ul {
@@ -42,13 +43,13 @@ ul {
   margin-left: 145px;
 }
 
-.under {
+.underline {
   text-decoration: underline 1px #FFC3C3;
 }
 
 .celsius {
-  margin-left: 10px;
-  margin-right: 5px;
+  margin-left: 2px;
+  margin-right: 3px;
 }
 
 .card {
