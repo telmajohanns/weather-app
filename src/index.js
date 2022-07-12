@@ -20,11 +20,12 @@ function displayWeather(response) {
   cityTitle.innerHTML = response.data.name;
   let cityTemp = document.querySelector("#temp-title");
   cityTemp.innerHTML = Math.round(response.data.main.temp);
+  console.log(response.data);
 }
 
-function findCity(input) {
+function findCity(response) {
   let apiKey = "8ae59972850a69a166acd5d323f383fb";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${response}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -38,7 +39,6 @@ let searchSubmit = document.querySelector("#location-form");
 searchSubmit.addEventListener("submit", submitCity);
 
 //Current location
-
 function findLocation(response) {
   let apiKey = "8ae59972850a69a166acd5d323f383fb";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${response.coords.latitude}&lon=${response.coords.longitude}&appid=${apiKey}&units=metric`;
