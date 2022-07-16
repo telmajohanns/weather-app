@@ -34,6 +34,8 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function findCity(response) {
@@ -64,7 +66,36 @@ function getCurrent(event) {
   navigator.geolocation.getCurrentPosition(findLocation);
 }
 
+//Conversion
+function convertFahrenheit(event) {
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temp-title");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function convertCelsius(event) {
+  event.preventDefault();
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temp-title");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let currentButton = document.querySelector("#curr-location-button");
 currentButton.addEventListener("click", getCurrent);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", convertFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", convertCelsius);
 
 findCity("New York");

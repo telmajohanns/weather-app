@@ -43,7 +43,11 @@ body {
 
 ul {
   list-style-type: none;
-  margin-left: 105px;
+}
+
+.sticky {
+  margin-left: 250px;
+  position: fixed;
 }
 
 .underline {
@@ -57,6 +61,14 @@ ul {
 .celsius {
   margin-left: 2px;
   margin-right: 3px;
+}
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 .card {
