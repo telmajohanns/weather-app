@@ -8,7 +8,15 @@ let hours = now.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
 }
-let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 let today = days[now.getDay()];
 
 let time = document.querySelector("#date");
@@ -20,7 +28,12 @@ function displayWeather(response) {
   cityTitle.innerHTML = response.data.name;
   let cityTemp = document.querySelector("#temp-title");
   cityTemp.innerHTML = Math.round(response.data.main.temp);
-  console.log(response.data);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#weather");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function findCity(response) {
@@ -53,3 +66,5 @@ function getCurrent(event) {
 
 let currentButton = document.querySelector("#curr-location-button");
 currentButton.addEventListener("click", getCurrent);
+
+findCity("New York");

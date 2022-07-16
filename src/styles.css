@@ -50,6 +50,10 @@ ul {
   text-decoration: underline 1px #FFC3C3;
 }
 
+.underline::first-letter {
+  text-transform: capitalize;
+}
+
 .celsius {
   margin-left: 2px;
   margin-right: 3px;
