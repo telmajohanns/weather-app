@@ -65,21 +65,26 @@ ul {
   margin-top: 6px;
 }
 
-.card {
-  width: 8rem;
-  height: 6rem;
-  margin: 2px 2px 2px 10px;
-  border: none;
-}
 
-.card-body {
+.forecast {
   border: 1px solid black;
   background-color: #FFC3C3;
   border-radius: 5px;
+  margin-left: 10px;
+  width: 6rem;
+  height: 5rem;
+  margin: 2px 2px 2px 10px;
 }
 
-.card-title {
+.forecast-date {
+  margin-top: 3px;
   font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.forecast-temp {
+  text-align: center;
 }
 
 .link {
