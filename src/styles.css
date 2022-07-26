@@ -62,15 +62,7 @@ ul {
 
 .celsius {
   margin-left: 2px;
-  margin-right: 3px;
-}
-.active {
-  color: black;
-  cursor: default;
-}
-
-.active:hover {
-  text-decoration: none;
+  margin-top: 6px;
 }
 
 .card {
